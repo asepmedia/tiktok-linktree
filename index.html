@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,700;0,800;0,900;1,500;1,600&display=swap');
+
+    html, body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+
+</head>
+<body class="bg-slate-200">
+    <div class="flex flex-col justify-center items-center h-screen max-w-md bg-[#087E8B] mx-auto gap-y-8 px-10">
+        <div>
+            <div class="flex w-[175px] h-[175px] bg-slate-200 rounded-3xl border-[3px] border-slate-950 shadow-[8px_3px_4px_0_rgb(0,0,0)]">
+              <img class="w-full" src="https://d8c5gilsw3qw4.cloudfront.net/img/icon.png" alt="">
+            </div>
+        </div>
+        <div class="text-center">
+            <h3 class="text-[28px] font-extrabold">KelasKiwari</h3>
+            <span class="text-[20px] font-medium text-[#202020]">
+              Platform Belajar Digital
+            </span>
+        </div>
+        <div id="links" class="flex flex-col w-full mt-10 gap-y-4">
+          <!-- <a class="bg-slate-200 hover:bg-slate-800 hover:text-slate-50 rounded-lg p-4 text-[18px] font-semibold text-center shadow-[8px_3px_4px_0_rgb(0,0,0)]" href="">
+            Portfolio
+          </a>
+          <a class="bg-slate-200 hover:bg-slate-800 hover:text-slate-50 rounded-lg p-4 text-[18px] font-semibold text-center shadow-[8px_3px_4px_0_rgb(0,0,0)]" href="">
+            Github
+          </a>
+          <a class="bg-slate-200 hover:bg-slate-800 hover:text-slate-50 rounded-lg p-4 text-[18px] font-semibold text-center shadow-[8px_3px_4px_0_rgb(0,0,0)]" href="">
+            Email
+          </a> -->
+        </div>
+    </div>
+
+    <script>
+      let links = [
+        {
+          "title": "Portfolio",
+          "link": "https://kelaskiwari.com/"
+        },
+        {
+          "title": "Github",
+          "link": "#"
+        },
+        {
+          "title": "Email",
+          "link": "#"
+        },
+      ]
+      
+      let elLinks = document.querySelector("#links")
+
+      let html = ''
+
+      links.forEach(function(link) {
+        html += `
+          <a class="bg-slate-200 hover:bg-slate-800 hover:text-slate-50 rounded-lg p-4 text-[18px] font-semibold text-center shadow-[8px_3px_4px_0_rgb(0,0,0)]" href="${link.link}">
+            ${link.title}
+          </a>
+        `
+      })
+
+      elLinks.innerHTML = html
+    </script>
+</body>
+</html>
